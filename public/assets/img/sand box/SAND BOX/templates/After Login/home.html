@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{user.username}}</title>
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'After Login/styles.css' %}" />
+    <link href="https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.css" rel="stylesheet">
+    <style>
+
+      .searchbar {
+        position: relative !important;
+        display: block;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        border-radius: 4px;
+        padding: 4px;
+        height: 40px;
+        background: url("{% static 'images/search.png' %}") no-repeat scroll 4px
+          6px;
+        padding-left: 40px;
+      }
+
+      .s {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+      .s .sbtn {
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        margin-top: -30px;
+        width: 100px;
+        padding: 5px;
+        background-color: rgb(192, 192, 192);
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .s .sbtn:active {
+        color: white;
+        background-color: rgb(7, 185, 22);
+        padding: 2px;
+        border-top: 5px solid rgb(7, 185, 22);
+        border-bottom: 5px solid rgb(7, 185, 22);
+      }
+
+      .searchbar::placeholder {
+        position: relative;
+        font-size: 20px;
+      }
+
+      .searchbar:focus {
+        border: 3px solid black;
+      }
+      .filter-container {
+        display: inline-block;
+        float: left;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+
+      .latest-text{
+        text-align: center;
+        display: inline-block;
+        margin-left: -170px;
+      }
+
+      .btcolor {
+        width: 100%;
+      }
+
+      /* .container{
+        position: relative;
+      }
+
+      .job::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 1s;
+      }
+
+      .job:hover::after {
+        transform: scale(1.4) scale(1.6);
+        background-color:blue;
+        opacity: 0;
+      } */
+
+      center {
+        margin-top: 10%;
+      }
+
+      img {
+        width: 400px;
+      }
+
+      .btn-danger {
+        margin: 4px;
+      }
+
+      .bottom div {
+        display: inline-block;
+        margin: 5px;
+
+      }
+
+      .bottom div img {
+        height: 400px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .bottom {
+        text-align: center;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .top {
+        background-color: #98FB98;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border-radius: 15px;
+      }
+    </style>
+    <div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#NavbarCollapsedContent"
+        aria-controls="NavbarCollapsedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span
+          style="background-color: white"
+          class="navbar-toggler-icon"
+        ></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        style="background-color: black"
+        id="NavbarCollapsedContent"
+      >
+        <ul class="navbar-nav ml-auto">
+         
+          <li class="nav-item">
+            <a class="nav-link navbar-color" style="color: white" href="{% url 'logout' %}"
+              >Logout</a
+            >
+          </li>
+        </ul></div>
+  <div class="row">
+    <div class="center">
+          <img class="title-image" src="{% static 'images/sandbox.png' %}" alt="freelance-image" width="100" height="300" style="border:100px;margin:40px">
+        </div>
+        <div class="col-lg-6">
+
+          <h1 style= "font-family: 'Courier New', monospace;">welcome to sandbox !!</h1>
+          <p style="color: green ">Sandbox is developed and established to help fledging entrepreneurs to find dependable investors who provide capital to companies exhibiting high growth potential in exchange for an equity stake.<br>Put your idea in sandbox and we'll find you a suitable investor.<br> Year in and year out, leading financial companies have recognized sandbox award-winning mediator software and brokerage services. Learn how our commitment to being the best online service can help you improve your business.<br> We believe our combination of trading technology and brokerage services gives every sandbox client an edge over the competition. But you don’t have to take our word for it.</p><
+
+        </div>
+
+    <marquee behavior=""scroll" direction="right"><h1>Our Investors Include</h1></marquee>
+          <img class="title-image" src="{% static 'images/gautam-adani.jpg' %}" alt="freelance-image" style="border:1000px;margin:40px"/>
+          <img class="title-image" src="{% static 'images/mukesh-ambani.jpg' %}" alt="freelance-image" style="border:40px;margin:40px"/>
+          <img class="title-image" src="{% static 'images/sudha murthy.jpg' %}" alt="freelance-image" style="border:100px;margin:45px"/>
+    </div>
+      <div>
+      <h1> </h1>
+    </div>
+    <div>
+    <div>
+      <p1>         <br>
+                   <br>
+
+      </p1>
+    </div>
+
+    <section class="white-section" id="features">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-fire fa-4x"></i>
+          <h3 class="feature-title">GAUTAM ADANI </h3>
+          <P> Mr. Gautam Adani is the founder and the Chairman of the Adani Group which ranks among the top 3 industrial conglomerates in India. Mr. Adani, a first-generation entrepreneur, is driven by the core philosophy of infusing “Growth with Goodness” through his vision of nation-building. Each of the Group’s businesses are focused on helping build world-class infrastructure capabilities to help accelerate the growth for India. The Foundation’s pan-India initiatives across key sectors of education, healthcare, sustainable livelihoods and community infrastructure development touch more than 3.4 Million lives annually in 2315 villages across 18 Indian states.</P>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-fire fa-4x"></i>
+          <h3>MUKESH AMBANI</h3>
+          <P>Indian industrialist and business mogul who is the chairman and managing director of of Reliance Industries, a giant petrochemicals, communications, power, and textiles conglomerate that was the biggest exporter in India and the first privately owned Indian company in the Fortune 500. In 2006 he was chosen to cochair the India Economic Summit of the World Economic Forum (WEF)—an international organization made up of some of the world’s prominent business leaders, politicians, policy makers, scholars, philanthropists, trade unionists, and representatives of nongovernmental organizations that convenes annually to discuss global commerce, economic development, political concerns, and important social issues. The following year he became India’s first rupee trillionaire.</P>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-fire fa-4x"></i>
+          <h3>SUDHA MURTHY</h3>
+          <p> Greatly known today as one of India’s most revered and successful woman, Sudha Murthy is an engineering teacher, philanthropist as well as an eminent writer of many known and appreciated Kannada and English novels. Through her books, she has encouraged both the young and elderly to inculcate a habit of reading as part of their lives.
+
+She is the chairperson of the Infosys Foundation and a member of public health care initiatives of the Gates Foundation. Through her Infosys Foundation, she has helped in spreading awareness about education, public hygiene, poverty alleviation, etc. She now aims to provide help that is needed for the small businesses to succeed</p>
+        </div>
+    </div>
+  </section>
+
+      </div>
+    </nav>
+    <center class="top">
+      <h1 style= "font-family: 'Courier New', monospace;"> SUMMIT YOUR IDEAS !!</h1>
+      <p></p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for=""> Name: </label>
+      <br>
+      <input type="text" name="name">
+      <br>
+      <label for="">Please enter your idea ( more then 500 words ): </label>
+      <br>
+      <textarea type="text" name = "idea"></textarea>
+      <br>
+      <Label>Select Service:</Label>
+      <br>
+
+      <select name="service" id="">
+        <option value="smm">Sales promotion</option>
+        <option value="pr">Public Relation</option>
+        <option value="dm">Provide business expertise</option>
+        <option value="ap">Experienced leadership and advice</option>
+        <option value="ap">Help managing risk</option>
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-success">
+    </form>
+  </center>
+  <hr>
+  <center><h3>Selected Service(s): </h3></center>
+
+  <center class="bottom">
+    {% for service in services %}
+    <sdiv>
+    {% if service.service_name == "smm" %}
+    <p>Social Media Marketing</p>
+    <br>
+     <img src={% static 'images/smm.jpg' %} alt="{{service}}">
+     <br>
+     <a href="{% url 'delete' service.id %}" class="btn btn-danger">Delete Service</a>
+    {% endif %}
+
+    </div>
+    <div>
+    {% if service.service_name == "pr" %}
+        <p>Public Relationship</p>
+        <br>
+     <img src={% static 'images/pr.jpg' %} alt="{{service}}">
+     <br>
+     <a href="{% url 'delete' service.id %}" class="btn btn-danger">Delete Service</a>
+    {% endif %}
+    </div>
+
+  <div>
+    {% if service.service_name == "dm" %}
+        <p>Direct Marketing</p>
+        <br>
+     <img src={% static 'images/dm.jpg' %} alt="{{service}}">
+     <br>
+     <a href="{% url 'delete' service.id %}" class="btn btn-danger">Delete Service</a>
+    {% endif %}
+  </div>
+  <div>
+    {% if service.service_name == "ap" %}
+        <p>Advertising Promotion</p>
+        <br>
+     <img src={% static 'images/ap.jpg' %} alt="{{service}}">
+     <br>
+     <a href="{% url 'delete' service.id %}" class="btn btn-danger">Delete Service</a>
+    {% endif %}
+  </div>
+
+
+  {% endfor %}
+  </center>
+
+
+   
+
+   
+
+    
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".toast").toast("show");
+      });
+      
+
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+      
+      
+    </script>
+  </body>
+</html>

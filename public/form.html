@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    }
+
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 800px;
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      transition: all 1s ease;
+    }
+
+    .form .form_front,
+    .form .form_back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: absolute;
+      backface-visibility: hidden;
+      padding: 100px 100px;
+      border-radius: 15px;
+      box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+      inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .form .form_front {
+      padding: 65px 45px;
+    }
+
+    .form .form_back {
+      transform: rotateY(-180deg);
+      padding: 65px 45px;
+    }
+
+    .form_details {
+      font-size: 25px;
+      font-weight: 600;
+      padding-bottom: 25px;
+      
+      color: white !important
+    }
+
+    .input {
+      width: 500px;
+      min-height: 50px;
+      color: #fff;
+      outline: none;
+      transition: 0.35s;
+      padding: 5px 7px;
+      background-color: #212121;
+      border-radius: 6px;
+      border: 2px solid #212121;
+      box-shadow: 6px 6px 10px rgba(0,0,0,1),
+      1px 1px 10px rgba(255, 255, 255, 0.6);
+      color: #fff; 
+    }
+
+    .input::placeholder {
+      color: #999;
+    }
+
+    .input:focus::placeholder {
+      transition: 0.3s;
+      opacity: 0;
+    }
+
+    .input:focus {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 10px rgba(0,0,0,1),
+      1px 1px 10px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 10px rgba(0,0,0,1),
+      inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+      transition: border-bottom-color 0.3s;
+    }
+
+    .form-container input:focus,
+    .form-container textarea:focus {
+      border-bottom-color: #555;
+      outline: none;
+    }
+
+    .form-container input::placeholder,
+    .form-container textarea::placeholder {
+      color: #999;
+    }
+
+    .btn {
+      padding: 10px 35px;
+      cursor: pointer;
+      background-color: #212121;
+      border-radius: 6px;
+      border: 2px solid #212121;
+      box-shadow: 6px 6px 10px rgba(0,0,0,1),
+      1px 1px 10px rgba(255, 255, 255, 0.6);
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.35s;
+      padding-top: 5cms;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 10px rgba(0,0,0,1),
+      1px 1px 10px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 10px rgba(0,0,0,1),
+      inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    }
+
+    .form .switch {
+      font-size: 13px;
+    }
+
+    .form .switch .signup_tog {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .container #signup_toggle {
+      display: none;
+    }
+
+    .container #signup_toggle:checked + .form {
+      transform: rotateY(-180deg);
+    }
+    label {
+    color: white; /* Change label text color to white */
+    font-size: large;
+    margin-top: 50px;
+    padding-top: 25px;
+
+  }
+  </style>
+</head>
+<body>
+  <video id="background-video" autoplay muted loop>
+    <source src="https://themes.fourthwall.com/themes/assets/11d2f253-34b7-4fdc-b01b-17868cd74972/assets/video-bg-dark.mp4?v=ab4ceb1e95742187fe677bf9070cf092638955e28eec6d5b87a3db7455d9948b" type="video/mp4">
+    <!-- Add additional video sources for cross-browser compatibility -->
+  </video>
+
+  <div class="container">
+    <div class="form">
+      <div class="form_front">
+        <h1 class="form_details">Contact Form</h1>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="input" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" class="input" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="input" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" class="input" required></textarea>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <img src="assets/img/57982a3e5771dfc325d55c776af346a5-sticker.png" alt="Image Description" style="width: 60%; height: auto;">
+
+          <div id="messageContainer"></div>
+          <div id="successMessage" style="display: none; color: green;">Message sent successfully!</div>
+          <div id="errorMessage" style="display: none; color: red;">Failed to send message. Please try again.</div>
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+  
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+  
+      var botToken = "5981898444:AAFc72IOZ2L4yPu_AZ1FZD5gtQY9oO5_ZT4";
+      var chatId = "886618527";
+  
+      var url = "https://api.telegram.org/bot5981898444:AAFc72IOZ2L4yPu_AZ1FZD5gtQY9oO5_ZT4/sendMessage";
+      var params = {
+        chat_id: 886618527,
+        text: `
+          Name: ${name}
+          Phone: ${phone}
+          Email: ${email}
+          Message: ${message}
+        `
+      };
+  
+      var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          document.getElementById("contactForm").reset();
+          document.getElementById("successMessage").style.display = "block";
+          document.getElementById("errorMessage").style.display = "none";
+        } else {
+          document.getElementById("successMessage").style.display = "none";
+          document.getElementById("errorMessage").style.display = "block";
+        }
+      }
+    };
+
+    xhr.send(JSON.stringify(params));
+  }
+</script>
+  
+
+</body>
+</html>

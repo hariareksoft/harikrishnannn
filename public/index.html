@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>hari krishnan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content=" Hari Krishnan's Portfolio">
+  <meta name="keywords" content="hari krishnan balaji">
+  <meta name="author" content="hari krishnan balaji">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel ="website icon" type="png"
+  href="/public/assets/img/dc4f4214cc763444b00d2c1cc4294f24-sticker.png">
+</head>
+<body>
+  <!-- <video id="background-video" autoplay loop muted>
+    <source src="https://themes.fourthwall.com/themes/assets/11d2f253-34b7-4fdc-b01b-17868cd74972/assets/video-bg-dark.mp4?v=ab4ceb1e95742187fe677bf9070cf092638955e28eec6d5b87a3db7455d9948b" type="video/mp4">
+  </video> -->
+ 
+
+  
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/logo.png" alt="hk">
+    <p>HKB</p>
+  </a>
+  <p class="device-notification--message">i have so much to offer that I must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/logo.png" alt="HKB">
+            
+            <!-- <p>HARI KRISHNAN.</p> -->
+          </a>
+          <!DOCTYPE html>
+          <button class="home-button" onclick="redirectToChat()">Ask Questions</button>
+    <style>
+    
+
+    .home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #9999f8;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  size: 50px;
+}
+
+    .chat-box {
+      width: 100%;
+      max-width: 400px; /* Added max-width for responsiveness */
+      border: 1px solid black;  
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      
+
+
+
+    }
+
+    .chat-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+    }
+
+   
+
+    .chat-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .chat-messages {
+      
+      max-height: 200px; /* Decreased max-height for mobile view */
+      overflow-y: scroll;
+      
+    }
+
+    .message.user {
+      background-color: lightgray;
+      color: black;
+      padding: 10px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .message.bot {
+      background-color: lightblue;
+      color: black;
+      padding: 10px;
+      margin-bottom: 10px;
+      align-self: flex-end;
+    }
+
+    .chat-input {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background-color: black;
+      padding: 20px;
+      border: 1px white;
+    }
+
+    .chat-input button {
+      background-color: #aec6cf;
+      color: black;
+      border: none;
+      /* padding: 5px 10px;
+      border-radius: 5px; */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .chat-input button:hover {
+      background-color: #555;
+    }
+
+    .user-input {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    .user-input input[type="text"] {
+      flex: 1;
+      padding: 25px;
+      border: 2px;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    
+
+    .user-input button {
+ padding: 20px 20px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #C0D2DE;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.user-input button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+}button {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+}
+
+    .suggested-questions {
+      flex-direction: column-reverse;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .suggested-question {
+      padding: 5px 10px;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .typing-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      animation: typing 0.8s infinite;
+      margin-left: 5px;
+    }
+
+    .created-by {
+      position: fixed;
+      bottom: 5px;
+      
+      font-size: 15px;
+      color: white;
+    }
+    .chat-header .close-button {
+  cursor: pointer;
+  padding-left: 250px;
+  font-weight: bolder;
+  
+}
+
+    @keyframes typing {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.6);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 500px) {
+      /* Adjustments for mobile view */
+      .chat-box {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        height: 100vh;
+        max-height: none;
+      }
+
+      .chat-header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .chat-header img {
+        margin-bottom: 10px;
+      }
+
+      .chat-messages {
+        max-height: calc(100vh - 180px); /* Adjusted max-height for mobile view */
+      }
+
+      .chat-input {
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-box" id="chatBox" style="display: none;">
+    <div class="chat-header">
+      <img src="./assets/img/logo.png" >
+      <h1></h1><br>
+      <span class="close-button" onclick="closeChatBox()">Close</span>
+     
+    </div>
+    
+    <div class="chat-messages" id="chatMessages">
+      <!-- Messages will be inserted here dynamically -->
+    </div>
+    <div class="chat-input">
+      
+      <div class="user-input">
+        <input type="text" id="question" placeholder="Type your question">
+        
+        <button id="send" onclick="sendMessage()">Send</button>
+      </div>
+      <center><h4>suggested questions</h4></center>
+      <div class="created-by">Created with chatgpt using promt engineering  </div>
+      <div class="suggested-questions" id="suggestedQuestions">
+        <!-- Suggested questions will be inserted here dynamically -->
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    function redirectToChat() {
+      document.querySelector('.home-button').style.display = 'none';
+      var chatBox = document.getElementById('chatBox');
+      chatBox.style.display = 'block';
+
+      // Open chat box with animation
+      setTimeout(function() {
+        chatBox.classList.add('open');
+      }, 100);
+
+      initializeChatBot();
+    }
+
+    function initializeChatBot() {
+      var messageInput = document.getElementById("question");
+      var sendButton = document.getElementById("send");
+      var suggestedQuestionsContainer = document.getElementById("suggestedQuestions");
+      var chatMessages = document.getElementById("chatMessages");
+
+      sendButton.addEventListener("click", function() {
+        var message = messageInput.value;
+        displayMessage("You", message, "user");
+        messageInput.value = "";
+
+        // Show typing indicator
+        displayTypingIndicator();
+
+        // Simulate a response from the chat bot after a delay
+        setTimeout(function() {
+          removeTypingIndicator();
+          var response = generateResponse(message);
+          displayMessage("Chat Bot", response, "bot");
+        }, 1000);
+      });
+
+      function generateResponse(message) {
+        if (message === "Where are you currently working?") {
+          return "I am currently working at areksoft.";
+        } else if (message === "What technologies do you know?") {
+          return "I know C, Python,Java HTML, CSS, SQL Kali Linux AWS Python Full Stack RPA-Automation Anywhere Adobe Photoshop,Adobe Lightroom MS Office,Drafting & Documentations.";
+
+        } else if (message === "Read my blogs") {
+          return "Sure! Please visit my blog website at <a href='sadaweya.wordpress.com'>sadaweya.wordpress.com</a>";
+        } else if (message === "Ask a custom question") {
+          redirectToForm();
+          return "Please ask your custom question.";
+        } else if (message === "Where do I live?") {
+          return createGoogleMapWindow("Hyderabad");
+        } else {
+          redirectToForm();
+        }
+      }
+      function createGoogleMapWindow(location) {
+  // Generate the HTML code for displaying a Google Map window of the given location
+  var encodedLocation = encodeURIComponent(location);
+  var mapUrl = `https://www.google.com/maps?q=${encodedLocation}&output=embed`;
+  var mapWindowHtml = `
+    <div>
+      <iframe width="100%" height="300" frameborder="0" style="border:0"
+        src="${mapUrl}" allowfullscreen></iframe>
+    </div>
+  `;
+  return mapWindowHtml;
+}
+
+
+      function displayMessage(sender, message, messageType) {
+        var messageElement = document.createElement("div");
+        messageElement.classList.add("message", messageType);
+        messageElement.innerHTML = `
+          <img src="${messageType === 'user' ? 'user-profile-pic.jpg' : 'bot-profile-pic.jpg'}" alt="${sender} ">
+          <div>${message}</div>
+        `;
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function displayTypingIndicator() {
+        var typingIndicator = document.createElement("span");
+        typingIndicator.classList.add("typing-indicator");
+        chatMessages.appendChild(typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        var typingIndicator = document.querySelector(".typing-indicator");
+        if (typingIndicator) {
+          typingIndicator.parentNode.removeChild(typingIndicator);
+        }
+      }
+
+      function redirectToForm() {
+        window.location.href = "form.html";
+      }
+
+      function populateSuggestedQuestions() {
+        var suggestedQuestions = [
+          "Where are you currently working?",
+          "What technologies do you know?",
+          "Read my blogs",
+          "Where do I live?"
+        ];
+
+        suggestedQuestions.forEach(function(question) {
+          var questionButton = document.createElement("button");
+          questionButton.classList.add("suggested-question");
+          questionButton.textContent = question;
+          questionButton.addEventListener("click", function() {
+            messageInput.value = question;
+          });
+          suggestedQuestionsContainer.appendChild(questionButton);
+        });
+      }
+
+      populateSuggestedQuestions();
+    }
+  
+  
+    function closeChatBox() {
+  var chatBox = document.getElementById('chatBox');
+  chatBox.classList.remove('open');
+  chatBox.style.display = 'none';
+  document.querySelector('.home-button').style.display = 'block';
+}
+
+
+  </script>
+
+
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>About</span></li>
+            <li><span>Experience</span></li>
+            
+            <li><span>Contact</span></li>
+            <li><span><a href="touch.html"></a></span></li>
+            
+            
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>HARI<br>KRISHNA<span style= Color:#C0D2DE>N</span><br>BALAJI.</h1>
+                
+                <button class="cta">HIRE ME
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+              <!-- <button class="btt">
+                <a href="https://drive.google.com/file/d/1tzK4JeIxoDGrwrwyC7FJYUozZv6yhLH1/view?usp=share_link">
+                  Resume
+                </a>
+              </button> -->
+              <img class="mobile-show" border="0"  src="assets/img/intro.png" style="display:>
+                <img src="assets/img/introduction-visual.png" alt="Welcome">
+              </div>
+              <img src="assets/img/intro.png" class="new-class" alt="Description">
+
+              <div class="intro--options">
+                <a href="#0">
+                  <h3><span style= Color:#A591D9>CYBER SECURITY</h3>
+                  <p>As a CYBERSECURITY enthusiast, I'm passionate about protecting businesses and individuals from online threats and keeping their data safe.
+                  </p>
+                </a>
+                <a href="#0">
+                  <h3><span style= Color:#A591D9>WEB DEVELOPMENT</h3>
+                  <p>As a front-end developer, I can bring your website to life with stunning visuals and user-friendly interfaces. Let's make your online presence shine!
+                  </p>
+                </a>
+                <a href="#0">
+                  <h3><span style= Color:#A591D9>BUSSINESS ANALYST</h3>
+                  <p>As a business analyst, I leverage my technical and interpersonal skills to help companies adapt to the current technological paradigm.
+                    .</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2><span style= Color:blue>Frontend</span> fusion,aesthetics and flow,
+                  <br><span style= Color:blue>Cybersecurity</span> synergy,<br><span style= Color:#C0D2DE>A powerful combo</span><br></h2>
+                <a href="https://drive.google.com/file/d/1FTJjSOGMfzYpj-TY49I6P4QT4_5-71R6/view?usp=share_link">Resume
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="assets/img/ezgif.com-gif-maker.gif" alt="About Us">
+              </div>
+              <div class="mobileHide">
+                <h1>My Projects (click to view) </h1>
+              </div>
+              <style type="text/css">
+                .mobileHide { display: inline; }
+              
+                /* Smartphone Portrait and Landscape */
+                @media only screen
+                  and (min-device-width : 320px)
+                  and (max-device-width : 480px){
+                   .mobileHide { display: none;}
+                }
+              </style>
+              <div class="mobileShow">
+                <h1>My Projects.<br>Sandbox.<br>Whalein.<br>Steganography.</br></h1>
+                </div>
+                <style type="text/css">
+                  .mobileShow { display: none;}
+                
+                  /* Smartphone Portrait and Landscape */
+                  @media only screen
+                    and (min-device-width : 320px)
+                    and (max-device-width : 480px){ 
+                      .mobileShow {display: inline;}
+                  }
+                </style>
+              <div class="about--options">
+                <a href="https://github.com/hari-krishnannn/sandbox">
+                  <h3>Sandbox</h3>
+                </a>
+                <a href="https://github.com/hari-krishnannn/whalein">
+                  <h3>Whalein</h3>
+                </a>
+                <a href="https://docs.google.com/document/d/1lSZSnJgmAKVAwGYfX4z_i8z0TCJGsLdK/edit?usp=share_link&ouid=114955563294091786029&rtpof=true&sd=true">
+                  <h3>Steganography</h3>
+                </a>
+              </div>
+              
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>Experience</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work-victory.jpg" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">Areksoft</p>
+                      <p class="slider--item-description">At Areksoft, my current workplace, I continue to contribute actively in implementing cutting-edge solutions and delivering exceptional services to clients. This experience has further enriched my industry knowledge, honed my technical skills, and fostered collaboration within a talented team.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">vachas</p>
+                      <p class="slider--item-description">As the former Speaking Lead at Vachas, the literature club of KL University, I fostered effective communication and public speaking skills among members through organizing events, workshops, and competitions. My role was to inspire and empower individuals to become confident and eloquent speakers.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
+                      </div> 
+                      <p class="slider--item-title">Cloudlion
+                      <p class="slider--item-description">
+                        During my 6-month internship at Cloud Lion, a Canadian-based Cloud Computing consultancy firm, I actively contributed to implementing cloud solutions and delivering top-notch services to clients. This experience deepened my industry understanding, honed my technical skills, and fostered collaboration within a highly skilled team.</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p></p>
+                    <a href="mailto:hari1752002@gmail.com">hari1752002@gmail.com</a>
+                    <a href="tel:+916281623125">+91 6281623125</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="https://www.linkedin.com/in/hari-krishnannn/">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/hari.krishnannn/">Instagram</a></li>
+                    <li><a href="https://twitter.com/harikrishnannn_">Twitter</a></li>
+                    <li><a href="mailto:hari1752002@gmail.com">Mail Me</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+       
+
+          <li class="l-section section">
+            <div class="hire">
+              <div class="back"></div>
+              <div class="registration-form">
+                <header>
+                  <h1>Now that you have reached till here<br> Drop me a message 🖖🏻</h1>
+                  <p>Fill in all informations</p>
+                  <img src="assets/img/57982a3e5771dfc325d55c776af346a5-sticker.png" alt="Image Description" style="width: 60%; height: auto;">
+
+                </header>
+                  <form action="" onsubmit=" return sender()" >
+                          
+                  <div class="input-section email-section">
+                    <input class="email" type="email" id="email" placeholder="MAIL-ID" autocomplete="off"/>
+                    <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+                  </div>
+                  <div class="input-section password-section folded">
+                    <input class="password" type="TEXT" id="name"placeholder="NAME"/>
+                    <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+                  </div>
+                  <div class="input-section repeat-password-section folded">
+                    <input class="repeat-password" type="TEXT" id="message" placeholder="MESSAGE"/>
+                    <button>
+                      <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>Send</span>
+                      
+                    </button>
+                    
+                </form>
+
+              </div>
+             
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Works</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>Message me</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+<script src="assets/js/sos.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./assets/js/sos.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./assets/js/sos.js"></script>
+<script src='./assets/js/confitti.js'></script>
+
+</body>
+</html>
