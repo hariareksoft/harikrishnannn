@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <title>hari krishnan</title>
+  <meta name="description" content="As a CYBERSECURITY enthusiast, I'm passionate about protecting businesses and individuals from online threats and keeping their data safe.">
+  <meta name="keywords" content="Hari Krishnan balaji, Cybersecurity, Web Development, Business Analysis, Portfolio, hari, krishnan, balaji">
+  <meta name="author" content="Hari Krishnan Balaji">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +20,114 @@
   <link rel ="website icon" type="png"
   href="/public/assets/img/dc4f4214cc763444b00d2c1cc4294f24-sticker.png">
 </head>
+<link rel ="website icon" type="gif"
+    href="/harikrishnannn/public/assets/img/dc4f4214cc763444b00d2c1cc4294f24-sticker.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8bad568a64.js" crossorigin="anonymous"></script>
+
 <body>
-  <!-- <video id="background-video" autoplay loop muted>
+  <!-- <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #fff; /* Set the background color to white */
+    }
+
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .loading-shape {
+        width: 0; /* Start with a width of 0 */
+        height: 0;
+        background-color: #000;
+        position: relative;
+    }
+
+    .percentage {
+        font-size: 24px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .content {
+        display: none; /* Hide the content by default */
+        text-align: center;
+        color: #000; /* Set text color to be visible on the white background */
+        font-size: 24px;
+    }
+</style>
+</head>
+<body>
+<div class="preloader">
+    <div class="loading-shape">
+        <div class="percentage">0%</div>
+    </div>
+</div>
+
+<script>
+    let percentage = 0;
+    const loadingShape = document.querySelector('.loading-shape');
+    const percentageText = document.querySelector('.percentage');
+    const content = document.querySelector('.content');
+
+    const incrementPercentage = () => {
+        percentage += 1;
+        percentageText.textContent = `${percentage}%`;
+
+        if (percentage <= 100) {
+            // Calculate the new shape size based on the maximum viewport dimension
+            const newSize = (percentage / 100) * Math.max(window.innerWidth, window.innerHeight);
+            loadingShape.style.width = newSize + 'px';
+            loadingShape.style.height = newSize + 'px';
+            requestAnimationFrame(incrementPercentage);
+        } else {
+            // Hide the preloader when loading is complete
+            document.querySelector('.preloader').style.display = 'none';
+        }
+    }
+
+    incrementPercentage();
+</script> -->
+
+  <style>
+    /* Apply this CSS to make the video the default background */
+    #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1; /* Place the video behind the content */
+    }
+
+    /* Optional: Center the content in front of the video */
+    .content {
+        position: relative;
+        z-index: 1; /* Place the content in front of the video */
+        text-align: center;
+        color: #fff; /* Set text color to be visible on the video background */
+        padding: 20px;
+    }
+</style>
+
+<body>
+<video id="background-video" autoplay loop muted>
     <source src="https://themes.fourthwall.com/themes/assets/11d2f253-34b7-4fdc-b01b-17868cd74972/assets/video-bg-dark.mp4?v=ab4ceb1e95742187fe677bf9070cf092638955e28eec6d5b87a3db7455d9948b" type="video/mp4">
-  </video> -->
+</video>
  
 
   
@@ -36,9 +145,42 @@
       <div class="l-wrapper">
         <header class="header">
           <a class="header--logo" href="#0">
+            <ul class="social-icons">
+              <li><a href="https://www.linkedin.com/in/hari-krishnannn/" target="_blank"><i class="fa-brands fa-linkedin " style="color: #A795D3;"></i></a></li>
+              <li><a href="https://twitter.com/harikrishnannn_" target="_blank"><i class="fa-brands fa-x-twitter " style="color: #A795D3;"></i></a></li>
+              <li><a href="https://www.instagram.com/hari.krishnannn/" target="_blank"><i class="fab fa-instagram" style="color: #A795D3;"></i></a></li>
+              <!-- Add more social media icons as needed  -->
+          </ul>
             <img src="assets/img/logo.png" alt="HKB">
-            
+            <style>
+             
+      
+              .social-icons {
+                  list-style: none;
+                  padding: 0;
+                  display: flex;
+              }
+      
+              .social-icons li {
+                  margin-right: 20px;
+              }
+      
+              .social-icons a {
+                  text-decoration: none;
+                  color: #fff;
+                  font-size: 18px;
+              }
+              @media (max-width: 767px) {
+            .social-icons {
+                display: none;
+            }
+          </style>
             <!-- <p>HARI KRISHNAN.</p> -->
+            <ul class="social-icons1">
+              <li><a href="https://drive.google.com/file/d/1_trN0n7xWbnRBo_5rl57FRDTDzM-opHq/view?usp=sharing" target="_blank"><i class="fa-solid fa-file fa-fade" style="color: #ffffff;"> Resume</i></a></li>
+              
+              <!-- Add more social media icons as needed -->
+          </ul>
           </a>
           <!DOCTYPE html>
           <button class="home-button" onclick="redirectToChat()">Ask Questions</button>
@@ -485,7 +627,7 @@ button:hover::before {
             <li><span>Experience</span></li>
             
             <li><span>Contact</span></li>
-            <li><span><a href="touch.html"></a></span></li>
+            <li><span><a href="touch.html" target="_blank"></a></span></li>
             
             
           </ul>
@@ -494,16 +636,59 @@ button:hover::before {
           <li class="l-section section section--is-active">
             <div class="intro">
               <div class="intro--banner">
-                <h1>HARI<br>KRISHNA<span style= Color:#C0D2DE>N</span><br>BALAJI.</h1>
+                <h1>HARI<br>KRISHNA<span style= Color:rgb(172,155,216)>N</span><br>BALAJI.</h1>
                 
-                <button class="cta">HIRE ME
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                  <span class="btn-background"></span>
-                </button>
+                <style>
+                  .button-container {
+                    display: flex; /* Use flexbox to arrange the buttons side by side */
+                    justify-content: flex-start;
+                  }
+                  
+                  .cta {
+                    /* Style your button as needed */
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                  }
+                  </style>
+                  </head>
+                  <body>
+                  
+                  <div class="button-container">
+                    <a href="https://hari-krishnannn.web.app/form.html" target="_blank"class="cta-link">
+                      <button class="cta">
+                        Toss me a line
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                          <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                            <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                          </g>
+                        </svg>
+                        <span class="btn-background"></span>
+                      </button>
+                    </a>
+                    
+                    </a>
+                    <a href="about.html" target="_blank"class="cta-link">
+                    <button class="cta">About Me
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                          <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                        </g>
+                        </svg>
+                        <span class="btn-background"></span>
+                    </button>
+                  </a>
+                    <!-- <button class="cta">Movie Review's
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                          <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                        </g>
+                        </svg>
+                        <span class="btn-background"></span>
+                    </button> -->
+                  </div>
               <!-- <button class="btt">
                 <a href="https://drive.google.com/file/d/1tzK4JeIxoDGrwrwyC7FJYUozZv6yhLH1/view?usp=share_link">
                   Resume
@@ -537,16 +722,19 @@ button:hover::before {
           <li class="l-section section">
             <div class="about">
               <div class="about--banner">
-                <h2><span style= Color:blue>Frontend</span> fusion,aesthetics and flow,
-                  <br><span style= Color:blue>Cybersecurity</span> synergy,<br><span style= Color:#C0D2DE>A powerful combo</span><br></h2>
-                <a href="https://drive.google.com/file/d/1FTJjSOGMfzYpj-TY49I6P4QT4_5-71R6/view?usp=share_link">Resume
-                  <span>
+                <h2><span style= Color:blue> I come with Frontend</span> fusion,aesthetics and flow,
+                  <br><span style= Color:blue> With Cybersecurity</span> synergy,<br><span style= Color:#C0D2DE>A powerful combo</span><br></h2>
+                
+                <a href="about.html"target="_blank" class="cta-link">
+                  <button class="cta">
+                    About me
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                      </g>
                     </svg>
-                  </span>
+                    <span class="btn-background"></span>
+                  </button>
                 </a>
                 <img src="assets/img/ezgif.com-gif-maker.gif" alt="About Us">
               </div>
@@ -563,9 +751,9 @@ button:hover::before {
                    .mobileHide { display: none;}
                 }
               </style>
-              <div class="mobileShow">
+              <!-- <div class="mobileShow">
                 <h1>My Projects.<br>Sandbox.<br>Whalein.<br>Steganography.</br></h1>
-                </div>
+                </div> -->
                 <style type="text/css">
                   .mobileShow { display: none;}
                 
@@ -577,15 +765,16 @@ button:hover::before {
                   }
                 </style>
               <div class="about--options">
-                <a href="https://github.com/hari-krishnannn/sandbox">
+                <a href="https://github.com/hari-krishnannn/sandbox" target="_blank">
                   <h3>Sandbox</h3>
                 </a>
-                <a href="https://github.com/hari-krishnannn/whalein">
+                <a href="https://github.com/hari-krishnannn/whalein"target="_blank">
                   <h3>Whalein</h3>
                 </a>
-                <a href="https://docs.google.com/document/d/1lSZSnJgmAKVAwGYfX4z_i8z0TCJGsLdK/edit?usp=share_link&ouid=114955563294091786029&rtpof=true&sd=true">
+                <a href="https://docs.google.com/document/d/1lSZSnJgmAKVAwGYfX4z_i8z0TCJGsLdK/edit?usp=share_link&ouid=114955563294091786029&rtpof=true&sd=true"target="_blank">
                   <h3>Steganography</h3>
                 </a>
+                
               </div>
               
             </div>
@@ -650,15 +839,16 @@ button:hover::before {
               <div class="contact--lockup">
                 <div class="modal">
                   <div class="modal--information">
-                    <p></p>
+                    <p><script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.463/build/spline-viewer.js"></script>
+                      <spline-viewer hint loading-anim url="https://prod.spline.design/sHlf7XTZ4HtaJst1/scene.splinecode"></spline-viewer></p>
                     <a href="mailto:hari1752002@gmail.com">hari1752002@gmail.com</a>
                     <a href="tel:+916281623125">+91 6281623125</a>
                   </div>
                   <ul class="modal--options">
-                    <li><a href="https://www.linkedin.com/in/hari-krishnannn/">Linkedin</a></li>
-                    <li><a href="https://www.instagram.com/hari.krishnannn/">Instagram</a></li>
-                    <li><a href="https://twitter.com/harikrishnannn_">Twitter</a></li>
-                    <li><a href="mailto:hari1752002@gmail.com">Mail Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/hari-krishnannn/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/hari.krishnannn/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/harikrishnannn_" target="_blank">Twitter</a></li>
+                    <li><a href="mailto:hari1752002@gmail.com" target="_blank">Mail Me</a></li>
                   </ul>
                 </div>
               </div>
@@ -674,6 +864,7 @@ button:hover::before {
                   <h1>Now that you have reached till here<br> Drop me a message 🖖🏻</h1>
                   <p>Fill in all informations</p>
                   <img src="assets/img/57982a3e5771dfc325d55c776af346a5-sticker.png" alt="Image Description" style="width: 60%; height: auto;">
+                  
 
                 </header>
                   <form action="" onsubmit=" return sender()" >
@@ -714,10 +905,11 @@ button:hover::before {
   </div>
   <ul class="outer-nav">
     <li class="is-active">Home</li>
-    <li>Works</li>
     <li>About</li>
-    <li>Contact</li>
+    <li>Experience</li>
+    <li>socials</li>
     <li>Message me</li>
+    
   </ul>
 </div>
 

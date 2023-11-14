@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8bad568a64.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Make the video take the full width */
+            height: 100%; /* Make the video take the full height */
+            object-fit: cover; /* Cut and center the video in the container */
+            z-index: -1;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            max-width: 800px; /* Limit the content width */
+        }
+
+        .image {
+            width: 50%;
+            text-align: right;
+        }
+
+        img {
+            max-width: 98%;
+            height: auto;
+            margin-top: 20px;
+            margin-right: 20px; /* Add margin to the right of the image */
+        }
+
+        .about-content {
+            width: 50%;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        button {
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+button:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+button:hover:before {
+  background-color: #fff;
+  width: 3rem;
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+
+        @media (max-width: 768px) {
+            #background-video {
+                height: 50vh; /* Adjust the video height as needed for mobile view */
+            }
+
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .image {
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+            }
+
+            .about-content {
+                width: 100%;
+                text-align: left;
+                margin-top: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+        .navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Background color for the navigation bar */
+    position: fixed; /* Make it a fixed-position navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Set the desired height */
+    z-index: 2; /* Ensure it's above the video background */
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    font-size: 24px; /* Adjust the icon size as needed */
+    color: #fff; /* Icon color */
+    text-decoration: none;
+    margin-right: 20px; /* Add some space between the icon and the content */
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-image"><img src="assets/img/logo.png" alt="Home"></a>
+
+
+        </div>
+    </nav>
+<div class="container">
+    <video id="background-video" autoplay loop muted>
+        <source src="https://themes.fourthwall.com/themes/assets/11d2f253-34b7-4fdc-b01b-17868cd74972/assets/video-bg-dark.mp4?v=ab4ceb1e95742187fe677bf9070cf092638955e28eec6d5b87a3db7455d9948b" type="video/mp4">
+    </video>
+    <div class="about-section">
+        <div class="image">
+            <img src="assets/img/about-visual.png" alt="About Us Image">
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Hey there, I'm Hari Krishnan Balaji, your friendly neighborhood code wizard and web guardian, hailing from the vibrant streets of Hyderabad, India.</p>
+            <p>By day, I'm all about software sorcery, specializing in web development and cyber shenanigans. By night, you'll find me knee-deep in a popcorn bucket, because I'm a die-hard movie aficionado. 🍿🎬</p>
+            <p>This little corner of the internet is where I stash my digital treasures and brainwaves. Expect a delightful chaos of code, creativity, and cyber secrets.</p>
+            <p>If you want to chat tech, cinema, or share your favorite GIFs, drop me a line at <a href="mailto:hari1752002@gamil.com">hari1752002@gamil.com</a>. Let's keep the funky vibes rollin'! 😎✨🚀</p>
+            <div class="social-icons">
+                
+                <a> I also write movie review's check it out at
+                <a href="https://twitter.com/harikrishnannn_" target="_blank" class="fa-brands fa-x-twitter"></a>
+            </div>
+            <br></br>
+            <a href="form.html" target="_blank">
+               <center> <button class="btn">
+                    Drop me a line
+                </button></center>
+            </a>
+                    </div>
+    </div>
+</div>
+</body>
+</html>
